@@ -1,0 +1,62 @@
+/* font-family: 'Kanit', sans-serif; */
+
+@font-face {
+  font-family: oswald_bold;
+  src: url("../fonts//Oswald-Bold.ttf");
+}
+
+@font-face {
+  font-family: oswald_reg;
+  src: url("../fonts//Oswald-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+:root {
+  --bg-color: #fff;
+  --main-color: #40d672;
+  --main-color-hover: #2cbd5c;
+  --sub-color: #d5d5d5;
+  --text-color: #1d221f;
+  --feature-color: #ff5f5f;
+}
+
+.dark_theme {
+  --bg-color: #313131;
+  --main-color: #f66e0d;
+  --main-color-hover: #c25b12;
+  --sub-color: #616161;
+  --text-color: #f5e6c8;
+  --feature-text: #e72d2d;
+}
+
+.retro_theme {
+  --bg-color: #07737a;
+  --main-color: #88dbdf;
+  --main-color-hover: #5ecacf;
+  --sub-color: #f3e03b;
+  --text-color: #fff;
+  --feature-color: #ff585d;
+}
