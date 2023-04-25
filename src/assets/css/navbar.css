@@ -9,7 +9,7 @@
     background: var(--bg-color);
   }
 
-  #mainNav a {
+  #mainNav .logo {
     display: block;
     text-align: center;
     /* font-family: "Kanit", sans-serif; */
@@ -21,7 +21,7 @@
     transition: all 0.3s ease-in-out;
   }
 
-  #mainNav a::before {
+  #mainNav .logo::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -33,7 +33,7 @@
     transition: all 0.3s ease-in-out;
   }
 
-  #mainNav a::after {
+  #mainNav .logo::after {
     transition: all 0.3s ease-in-out;
     content: "";
     position: absolute;
@@ -52,10 +52,18 @@
   #mainNav li {
     cursor: pointer;
     margin-bottom: 40px;
+  }
+
+  #mainNav li a {
     font-size: 20px;
     font-family: oswald_reg;
     color: var(--text-color);
     transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+  }
+
+  #mainNav li a.active {
+    color: var(--main-color);
   }
 
   #mainNav li i {

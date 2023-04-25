@@ -1,11 +1,11 @@
 import React from "react";
-import my_img from "../assets/img/pic_1.jpg";
+import my_img from "../assets/img/me_1.jpg";
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <section className="home">
+      <section className="home" id="home">
         <div className="container">
           <div className="home_text_container">
             <div className="home_text">

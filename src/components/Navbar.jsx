@@ -2,12 +2,40 @@ import { Link } from "react-router-dom";
 import "../assets/css/navbar.css";
 import link_data from "../data/LinksData";
 import NavLink from "./NavLink";
+import { useEffect, useState } from "react";
 
-const NavBar = ({ isDarkMode, onDarkModeChange }) => {
+const NavBar = ({ onDarkModeChange }) => {
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll("section");
+    let currentSectionId = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
+
+    setActiveLink(currentSectionId);
+  };
+
   const renderNavLinks = link_data.map((item) => {
     return (
       <li key={item.id}>
-        <NavLink icon={item.icon} text={item.label} />
+        <NavLink
+          icon={item.icon}
+          text={item.label}
+          link={item.value}
+          currSec={activeLink}
+        />
       </li>
     );
   });
@@ -15,7 +43,9 @@ const NavBar = ({ isDarkMode, onDarkModeChange }) => {
   return (
     <nav className="section" id="mainNav">
       <div className="container">
-        <Link to="/">ASER</Link>
+        <Link to="/" className="logo">
+          ASER
+        </Link>
         <ul>{renderNavLinks}</ul>
 
         <div className="color_options">
