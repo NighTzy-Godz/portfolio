@@ -1,0 +1,161 @@
+@media screen and (min-width: 1200px) {
+  .single_project {
+    padding: 40px 0px 40px 40px;
+    background-color: var(--bg-color);
+  }
+
+  .single_project section {
+    margin-bottom: 40px;
+  }
+
+  .single_project section p {
+    font-family: "Kanit", sans-serif;
+    color: var(--text-color);
+
+    font-size: 18px;
+  }
+
+  .single_project section p span {
+    font-weight: 900;
+  }
+
+  .single_project section p a {
+    color: var(--main-color);
+  }
+
+  .single_project section p a:hover {
+    text-decoration: underline;
+  }
+
+  .single_project section h1 {
+    font-family: oswald_bold;
+    font-size: 45px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+  }
+
+  .project_gallery .large_img img {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .project_gallery .img_thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .project_gallery .img_thumbnails img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .project_gallery .img_thumbnails img.active {
+    border: 3px solid var(--main-color);
+  }
+
+  .project_gallery .img_thumbnails img:hover {
+    transform: scale(1.05);
+  }
+
+  .tech_container p {
+    margin-bottom: 10px;
+  }
+
+  .single_project .features p {
+    margin-bottom: 10px;
+  }
+
+  .single_project .links p {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .single_project {
+    padding: 40px 0px;
+    background-color: var(--bg-color);
+  }
+
+  .single_project section {
+    margin-bottom: 40px;
+  }
+
+  .single_project section p {
+    font-family: "Kanit", sans-serif;
+    color: var(--text-color);
+
+    font-size: 15px;
+  }
+
+  .single_project section p span {
+    font-weight: 900;
+  }
+
+  .single_project section p a {
+    color: var(--main-color);
+  }
+
+  .single_project section p a:hover {
+    text-decoration: underline;
+  }
+
+  .single_project section h1 {
+    font-family: oswald_bold;
+    font-size: 35px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+  }
+
+  .project_gallery .large_img img {
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .project_gallery .img_thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .project_gallery .img_thumbnails img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .project_gallery .img_thumbnails img.active {
+    border: 3px solid var(--main-color);
+  }
+
+  .project_gallery .img_thumbnails img:hover {
+    transform: scale(1.05);
+  }
+
+  .tech_container p {
+    margin-bottom: 10px;
+  }
+
+  .single_project .features p {
+    margin-bottom: 10px;
+  }
+
+  .single_project .links p {
+    margin-bottom: 10px;
+  }
+}

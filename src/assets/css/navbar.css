@@ -1,15 +1,26 @@
 @media screen and (min-width: 1200px) {
-  #mainNav {
+  .mainNav {
     transition: all 0.3s ease-in-out;
-    min-height: 100vh;
+    height: 100%;
     padding: 50px 0px;
     position: fixed;
     width: 320px;
-    border-right: 0.5px solid rgba(0, 0, 0, 0.123);
+    /* border-right: 0.1px solid var(--text-color); */
     background: var(--bg-color);
+
+    overflow-y: scroll;
   }
 
-  #mainNav .logo {
+  .mainNav::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .mainNav::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-radius: 10px;
+  }
+
+  .mainNav .logo {
     display: block;
     text-align: center;
     /* font-family: "Kanit", sans-serif; */
@@ -21,40 +32,41 @@
     transition: all 0.3s ease-in-out;
   }
 
-  #mainNav .logo::before {
+  .mainNav .logo::before {
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
-    border-top: 5px solid var(--feature-color);
-    border-left: 5px solid var(--feature-color);
+    border-top: 5px solid var(--text-color);
+    border-left: 5px solid var(--text-color);
     top: 0;
-    left: 30px;
+    left: 20px;
     transition: all 0.3s ease-in-out;
   }
 
-  #mainNav .logo::after {
+  .mainNav .logo::after {
     transition: all 0.3s ease-in-out;
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
-    border-bottom: 5px solid var(--feature-color);
-    border-right: 5px solid var(--feature-color);
+    border-bottom: 5px solid var(--text-color);
+    border-right: 5px solid var(--text-color);
     bottom: 0;
-    right: 30px;
+    right: 20px;
   }
 
-  #mainNav ul {
+  .mainNav ul {
     padding: 0px 40px;
+    margin-bottom: 130px;
   }
 
-  #mainNav li {
+  .mainNav li {
     cursor: pointer;
     margin-bottom: 40px;
   }
 
-  #mainNav li a {
+  .mainNav li a {
     font-size: 20px;
     font-family: oswald_reg;
     color: var(--text-color);
@@ -62,32 +74,168 @@
     color: var(--text-color);
   }
 
-  #mainNav li a.active {
+  .mainNav li a.active {
     color: var(--main-color);
   }
 
-  #mainNav li i {
+  .mainNav li i {
     width: 45px;
   }
 
-  #mainNav .color_options h3 {
+  .mainNav .color_options {
     padding-left: 35px;
-    margin-bottom: 30px;
+  }
+
+  .mainNav .color_options h3 {
+    /* text-align: center; */
+
+    margin-bottom: 20px;
     font-family: oswald_reg;
     font-size: 25px;
     color: var(--main-color);
-    /* font-family: "Kanit", sans-serif; */
   }
 
-  #mainNav .color_options_container {
+  .mainNav .color_options button {
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    width: 70%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .mainNav .color_options button:hover {
+    background-color: var(--main-color-hover);
+  }
+
+  .mainNav .color_options_container {
     display: flex;
     justify-content: space-around;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    padding: 8px 0px;
+    border-radius: 5px;
   }
 
-  #mainNav .color_options .colors {
+  .mainNav .color_options .colors {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: rebeccapurple;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .mainNav {
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    padding: 50px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transform: translateX(-100%);
+    /* border-right: 0.1px solid var(--text-color); */
+    background: var(--bg-color);
+
+    overflow-y: scroll;
+  }
+
+  .mainNav.show {
+    transform: translateX(0) !important;
+  }
+
+  .mainNav::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .mainNav::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-radius: 10px;
+  }
+
+  .mainNav .logo {
+    display: block;
+
+    font-family: oswald_bold;
+    font-size: 60px;
+    color: var(--main-color);
+    position: relative;
+    margin-bottom: 150px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .mainNav ul {
+    margin-bottom: 150px;
+  }
+
+  .mainNav li {
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  .mainNav li a {
+    font-size: 20px;
+    font-family: oswald_reg;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+  }
+
+  .mainNav li a.active {
+    color: var(--main-color);
+  }
+
+  .mainNav li i {
+    width: 45px;
+  }
+
+  .mainNav .color_options h3 {
+    /* text-align: center; */
+
+    margin-bottom: 20px;
+    font-family: oswald_reg;
+    font-size: 25px;
+    color: var(--main-color);
+  }
+
+  .mainNav .color_options button {
+    font-family: "Kanit", sans-serif;
+    font-size: 15px;
+    width: 70%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .mainNav .color_options button:hover {
+    background-color: var(--main-color-hover);
+  }
+
+  .mainNav .color_options_container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    background-color: var(--main-color);
+    padding: 8px 0px;
+    border-radius: 5px;
+    width: 70%;
+  }
+
+  .mainNav .color_options .colors {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
     background-color: rebeccapurple;
     border-radius: 50%;
   }

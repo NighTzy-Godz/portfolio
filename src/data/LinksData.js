@@ -14,12 +14,6 @@ const link_data = [
   },
 
   {
-    id: 2,
-    label: "Education",
-    value: "education",
-    icon: "fa-solid fa-school",
-  },
-  {
     id: 3,
     label: "Projects",
     value: "projects",

@@ -36,20 +36,22 @@ li {
 
 :root {
   --bg-color: #fff;
+  --bg-color-hover: rgb(241, 234, 234);
   --main-color: #40d672;
   --main-color-hover: #2cbd5c;
   --sub-color: #d5d5d5;
   --text-color: #1d221f;
-  --feature-color: #ff5f5f;
+
+  --defaultBlack: #1d221f;
 }
 
 .dark_theme {
   --bg-color: #313131;
+  --bg-color-hover: #383434;
   --main-color: #f66e0d;
   --main-color-hover: #c25b12;
   --sub-color: #616161;
   --text-color: #f5e6c8;
-  --feature-text: #e72d2d;
 }
 
 .retro_theme {
@@ -58,5 +60,12 @@ li {
   --main-color-hover: #5ecacf;
   --sub-color: #f3e03b;
   --text-color: #fff;
-  --feature-color: #ff585d;
+}
+
+.dmg_theme {
+  --bg-color: #dadbdc;
+  --main-color: #ae185e;
+  --main-color-hover: #be216a;
+  --sub-color: #3846b1;
+  --text-color: #414141;
 }
