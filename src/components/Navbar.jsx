@@ -3,10 +3,10 @@ import "../assets/css/navbar.css";
 import link_data from "../data/LinksData";
 import NavLink from "./NavLink";
 import { useEffect, useState } from "react";
+import ColorOptions from "./ColorOptions";
 
 const NavBar = ({ isShow, onDarkModeChange, onShowChange }) => {
   const [activeSection, setActiveSection] = useState("");
-  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,14 +59,10 @@ const NavBar = ({ isShow, onDarkModeChange, onShowChange }) => {
     );
   });
 
-  const handleMenuClick = () => {
-    setClicked(!clicked);
-  };
-
   return (
     <nav className={`mainNav ${isShow ? "show" : ""}`}>
       <i
-        class="fa-solid fa-arrow-left"
+        className="fa-solid fa-arrow-left"
         id="navClose"
         onClick={() => onShowChange(false)}
       ></i>
@@ -76,36 +72,7 @@ const NavBar = ({ isShow, onDarkModeChange, onShowChange }) => {
         </Link>
         <ul>{renderNavLinks}</ul>
 
-        <div className="color_options">
-          <h3>Pick a Color Theme </h3>
-          <button onClick={handleMenuClick}>
-            {clicked ? "Close this window" : "Choose a Theme"}
-          </button>
-          {clicked && (
-            <div className="color_options_container">
-              <div
-                className="colors"
-                style={{ backgroundColor: "#fff" }}
-                onClick={() => onDarkModeChange("")}
-              ></div>
-              <div
-                className="colors"
-                style={{ backgroundColor: "#313131" }}
-                onClick={() => onDarkModeChange("dark_theme")}
-              ></div>
-              <div
-                className="colors"
-                style={{ backgroundColor: "#07737a" }}
-                onClick={() => onDarkModeChange("retro_theme")}
-              ></div>
-              <div
-                className="colors"
-                style={{ backgroundColor: "#dadbdc" }}
-                onClick={() => onDarkModeChange("dmg_theme")}
-              ></div>
-            </div>
-          )}
-        </div>
+        <ColorOptions onDarkModeChange={onDarkModeChange} />
       </div>
     </nav>
   );

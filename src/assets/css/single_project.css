@@ -366,30 +366,6 @@
     border-radius: 8px;
   }
 
-  .project_gallery .img_thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .project_gallery .img_thumbnails img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .project_gallery .img_thumbnails img.active {
-    border: 3px solid var(--main-color);
-  }
-
-  .project_gallery .img_thumbnails img:hover {
-    transform: scale(1.05);
-  }
-
   .tech_container p {
     margin-bottom: 10px;
   }

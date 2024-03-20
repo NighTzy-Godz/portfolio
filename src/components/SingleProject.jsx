@@ -2,8 +2,34 @@ import { useParams } from "react-router-dom";
 import projects from "../data/projectData";
 import "../assets/css/single_project.css";
 import { useEffect, useState } from "react";
+import Slider from "react-slick";
 
 const SingleProject = ({ onShowChange }) => {
+  const settings = {
+    dots: true,
+
+    speed: 500,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  };
+
   const { projectId } = useParams();
   const data = projects.find((proj) => proj.id === parseInt(projectId));
 
@@ -29,7 +55,7 @@ const SingleProject = ({ onShowChange }) => {
   return (
     <div className="single_project">
       <i
-        class="fa-solid fa-arrow-right"
+        className="fa-solid fa-arrow-right"
         id="navOpen"
         onClick={() => onShowChange(true)}
       ></i>
@@ -44,17 +70,19 @@ const SingleProject = ({ onShowChange }) => {
           <div className="large_img">
             <img src={activeImg} alt="" />
           </div>
-          <div className="img_thumbnails">
+
+          <Slider {...settings}>
             {pictures.map((pic) => (
               <img
                 key={pic}
                 src={pic}
                 alt=""
                 className={`${activeImg === pic ? "active" : ""}`}
+                style={{ cursor: "pointer" }}
                 onClick={() => handleActiveImg(pic)}
               />
             ))}
-          </div>
+          </Slider>
         </section>
 
         <section className="technologies">
@@ -81,14 +109,21 @@ const SingleProject = ({ onShowChange }) => {
         <section className="links">
           <h1>Project Links</h1>
 
-          {links.map((link) => (
-            <p key={link.id}>
-              <span>{link.name}: </span>{" "}
-              <a href={link.link} target="_blank">
-                {link.link}
-              </a>
-            </p>
-          ))}
+          {links.map((link) => {
+            console.log(link);
+            return (
+              <p key={link.id}>
+                <span>{link.name}: </span>{" "}
+                <a
+                  href={link.link}
+                  target="_blank"
+                  className={`${link.disabled ? "disabled_link" : ""}`}
+                >
+                  {link.link}
+                </a>
+              </p>
+            );
+          })}
         </section>
 
         <section className="team">

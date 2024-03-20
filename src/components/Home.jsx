@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import my_img from "../assets/img/me_2.jpg";
+import my_img from "../assets/img/me_4.jpg";
 import Typewriter from "typewriter-effect";
 import projects from "../data/projectData";
 import ProjectCard from "./ProjectCard";
-import { useLocation } from "react-router-dom";
+
 import { toast } from "react-toastify";
 
 const Home = ({ onShowChange }) => {
@@ -92,7 +92,9 @@ const Home = ({ onShowChange }) => {
                 <a href="#about">Explore More</a>
               </div>
             </div>
-            <img src={my_img} alt="" />
+            <div className="me_img">
+              <img src={my_img} alt="" />
+            </div>
           </div>
         </section>
         <section className="about" id="about" ref={aboutRef}>

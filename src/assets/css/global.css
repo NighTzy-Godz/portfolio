@@ -20,6 +20,45 @@ html {
   scroll-behavior: smooth;
 }
 
+.slick-dots button::before {
+  color: var(--text-color) !important;
+}
+
+.disabled_link {
+  pointer-events: none;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.slick-slide img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.slick-active button::before {
+  color: var(--main-color) !important;
+}
+
+.slick-track {
+  display: flex !important;
+  gap: 1rem;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: var(--text-color) !important;
+}
+
+.me_img {
+  display: grid;
+  place-content: center;
+}
+
+.me_img img {
+  height: 90%;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -68,4 +107,12 @@ li {
   --main-color-hover: #be216a;
   --sub-color: #3846b1;
   --text-color: #414141;
+}
+
+@media screen and (max-width: 575px) {
+  .slick-slide img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+  }
 }

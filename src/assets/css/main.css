@@ -16,7 +16,7 @@
     transition: all 0.3s ease-in-out;
   }
   .home {
-    min-height: 800px;
+    min-height: 100dvh;
     max-height: 100%;
 
     background-color: var(--bg-color);
@@ -91,7 +91,7 @@
     display: grid;
     place-content: center;
     transition: all 0.3s ease-in-out;
-    min-height: 800px;
+    min-height: 100dvh;
     max-height: 100%;
     /* padding-top: 10px; */
     background-color: var(--bg-color);
@@ -322,7 +322,7 @@
   }
 
   .home {
-    min-height: 800px;
+    min-height: 100dvh;
     max-height: 100%;
 
     background-color: var(--bg-color);
@@ -396,7 +396,7 @@
     display: grid;
     place-content: center;
     transition: all 0.3s ease-in-out;
-    min-height: 800px;
+    min-height: 100dvh;
     max-height: 100%;
     /* padding-top: 10px; */
     background-color: var(--bg-color);
