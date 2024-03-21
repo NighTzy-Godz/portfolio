@@ -46,6 +46,13 @@ import sp13 from "../assets/img/skillpulse/sp13.png";
 import sp14 from "../assets/img/skillpulse/sp14.png";
 import sp15 from "../assets/img/skillpulse/sp15.png";
 
+import ff_thumb from "../assets/img/filmflux/ff_thumb.png";
+import ff1 from "../assets/img/filmflux/ff1.png";
+import ff2 from "../assets/img/filmflux/ff2.png";
+import ff3 from "../assets/img/filmflux/ff3.png";
+import ff4 from "../assets/img/filmflux/ff4.png";
+import ff5 from "../assets/img/filmflux/ff5.png";
+
 const defaultTechs = [
   {
     id: 0,
@@ -99,6 +106,7 @@ const projects = [
     ],
     duration: "5 Days",
   },
+
   {
     id: 1,
     name: "DesignSpot",
@@ -230,30 +238,42 @@ const projects = [
         name: "Cloudinary",
         desc: "Cloudinary is a cloud-based media management platform that provides a wide range of tools for managing, optimizing, and delivering images and videos for web and mobile applications. It offers features such as image and video manipulation and automated image optimization. ",
       },
+      {
+        id: 15,
+        name: "Redux",
+        desc: "Redux is a JavaScript state management library for React applications. It centralizes state management, ensuring predictable behavior and simplifying data flow through reducers.",
+      },
+      {
+        id: 16,
+        name: "Typescript",
+        desc: "TypeScript is a superset of JavaScript that adds static typing and other advanced features for enhanced code quality and maintainability.",
+      },
+      {
+        id: 17,
+        name: "TailwindCSS",
+        desc: "Tailwind CSS is a utility-first CSS framework that simplifies web development with pre-built utility classes for rapid styling.",
+      },
     ],
     shortDesc:
-      "Skillpulse is a Full Stack (MERN) comprehensive job searching platform, similar to LinkedIn, designed to streamline the job search process for both job seekers and employers. Users can browse job listings, apply for positions, and manage their applications easily. Additionally, Skillpulse offers a strong authentication features to ensure secure access for users, along with functionalities for creating and managing company profiles, posting job listings, and tracking applicant data.",
+      "Skillpulse is a Full Stack (MERN) comprehensive job searching platform, similar to LinkedIn, designed to streamline the job search process for both job seekers and employers. Users can browse job listings, apply for positions, and manage their applications easily. Additionally, Skillpulse offers a strong authentication features to ensure secure access for users.",
 
     description:
-      "Harmony is a hospital management system built using modern web technologies such as React as its Front-End and NodeJs and Express with MongoDB as its backend. The app has three different roles: patient, doctor, and admin, and provides each role with specific access and functionality. The patient portal allows patients to manage their appointments and medical records, while the doctor portal enables doctors to view patient medical history and manage their schedules. The admin portal provides powerful tools to manage hospital operations. The Harmony hospital management system is a comprehensive solution for managing hospital operations and improving patient satisfaction.",
+      "Skillpulse emerges as a pinnacle of efficiency and effectiveness in the realm of job searching platforms. With its robust Full Stack (MERN) architecture reminiscent of industry giants like LinkedIn, it caters to the needs of job seekers and employers alike, offering intuitive tools for seamless job exploration, application management, and talent acquisition. By prioritizing user experience, security, and innovation, Skillpulse stands as a beacon of hope and opportunity in the ever-evolving landscape of career advancement.",
     features: [
-      "Patient can search for doctors by name or specialty.",
-      "Patient can create an Appointment.",
-      "Patient can cancel an Appointment.",
-      "Patient can Mark as Done on their Prescription.",
-      "Patient can delete a Prescription.",
-      "Patient can view and update personal information",
+      "Users can search for jobs by title, company, or keyword.",
+      "Users can apply for jobs directly through the platform.",
+      "Users can save jobs for later viewing",
+      "Employers can post job listings with detailed descriptions",
+      "Employers can manage job listings, including editing and deleting them.",
+      "Users can track the status of their job applications.",
 
-      "Doctor can decide whether to accept or decline an appointment.",
-      "Doctor can create a prescription (If a Doctor accepted an appointment).",
-      "Doctor can delete the recent Prescription.",
-      "Doctor cannot Access the Dashboard if they are not accepted.",
-      "Doctor can view and update personal information",
+      "Users can receive notifications for new job opportunities matching their preferences.",
+      "Employers can review and manage applications received for their job listings.",
+      "Users can update their profile information and resume.",
+      "Users can communicate with employers through messaging features.",
+      "Employers can search for candidates based on specific criteria.",
 
-      "Admin can see all the Appointments, Patients and Doctors.",
-      "Admin can accept a Doctor for Requests.",
-      "Admin can manage all the users or ban them.",
-      "Admin can view and update personal information",
+      "Employers can schedule interviews with candidates directly through the platform.",
     ],
     links: [
       {
@@ -404,6 +424,47 @@ const projects = [
       },
     ],
     duration: "4 1/2 Weeks or 32 Days",
+  },
+
+  {
+    id: 5,
+    name: "FilmFlux",
+    thumbnail: ff_thumb,
+    pictures: [ff_thumb, ff1, ff2, ff3, ff4, ff5],
+    technologies: [
+      ...defaultTechs,
+      {
+        id: 15,
+        name: "Redux",
+        desc: "Redux is a JavaScript state management library for React applications. It centralizes state management, ensuring predictable behavior and simplifying data flow through reducers.",
+      },
+    ],
+
+    shortDesc:
+      "Filmflux is a React Redux project that integrates with the TMDB API, providing users with a seamless movie browsing experience. With its intuitive interface, users can easily search for their favorite movies within the app and powered by Redux for state management",
+    description:
+      "Filmflux is a captivating React Redux application that bridges users to the vast landscape of cinema via the TMDB API. With its sleek interface, Filmflux enables users to not just browse movies but also receive tailor-made recommendations, drawing from their unique tastes and preferences. Delving deeper, Filmflux offers valuable insights into the status, budget, and cast of each film, enriching the movie exploration journey for enthusiasts seeking both entertainment and knowledge.",
+    features: [
+      "Users can search for movies by title, genre, or keyword.",
+      "Users can explore detailed information about each movie, including its synopsis, release date, and ratings.",
+      "Users can view the status, budget, and cast details of each movie to gain deeper insights into its production.",
+      "Users can easily switch between different devices, with Filmflux offering a responsive and cross-platform experience.",
+      "Users can search for people involved in movie production, including actors, directors, and producers.",
+      "Users can navigate easily through the application with intuitive and user-friendly navigation.",
+    ],
+    links: [
+      {
+        id: 0,
+        name: "GitHub Repository",
+        link: "https://github.com/NighTzy-Godz/FilmFlux",
+      },
+      {
+        id: 1,
+        name: "Demo Website",
+        link: "https://film-flux.vercel.app",
+      },
+    ],
+    duration: "17 Days",
   },
 ];
 

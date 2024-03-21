@@ -103,7 +103,7 @@ const Home = ({ onShowChange }) => {
             <p>
               Hello, my name is Aser James Hubero, and I recently graduated from
               Asia Pacific College with a strand of STEM, taking Information
-              Technology as my specialization. I'm 19 years old and I'm a rising
+              Technology as my specialization. I'm 20 years old and I'm a rising
               ReactJS developer with a lot of programming passion, but I'm also
               proficient in NodeJS, Express, and MongoDB, which makes it easy
               for me to work on MERN stack projects.
